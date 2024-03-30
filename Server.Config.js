@@ -19,7 +19,7 @@ export default class {
 			HTTPResponse += "Content-Length: " + result.length + "\r\n";
 			HTTPResponse += "\r\n";
 			HTTPResponse += result.content + "\r\n";
-			console.log(`${Honeydew}HTTP: ${(()=>{if(result.code>400){return Red} else if (result.code==200){return Emerald}})()}${result.message} ${result.code} ${Orange}${result.contentType}`);
+			console.log(`${Honeydew}HTTP: ${(()=>{if(result.code>400){return Red} else if (result.code==200){return Emerald}})()}${result.message} ${result.code} ${Orange}${result.contentType} ${req.path}`);
 		} else {
 			throw new (class {
 				constructor() {
